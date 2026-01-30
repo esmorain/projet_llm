@@ -1,9 +1,18 @@
 import streamlit as st
 from agents import Agent, Runner, function_tool
-from src.indexor import search
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
+
+# Support Streamlit Cloud secrets
+if "OPENAI_API_KEY" in st.secrets:
+    os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
+if "UPSTASH_VECTOR_REST_URL" in st.secrets:
+    os.environ["UPSTASH_VECTOR_REST_URL"] = st.secrets["UPSTASH_VECTOR_REST_URL"]
+    os.environ["UPSTASH_VECTOR_REST_TOKEN"] = st.secrets["UPSTASH_VECTOR_REST_TOKEN"]
+
+from src.indexor import search
 
 # Configuration de la page
 st.set_page_config(

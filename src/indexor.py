@@ -1,8 +1,19 @@
 from pathlib import Path
 from upstash_vector import Index
 from dotenv import load_dotenv
+import os
 
 load_dotenv()
+
+# Support Streamlit Cloud secrets
+try:
+    import streamlit as st
+    if "UPSTASH_VECTOR_REST_URL" in st.secrets:
+        os.environ["UPSTASH_VECTOR_REST_URL"] = st.secrets["UPSTASH_VECTOR_REST_URL"]
+        os.environ["UPSTASH_VECTOR_REST_TOKEN"] = st.secrets["UPSTASH_VECTOR_REST_TOKEN"]
+except:
+    pass
+
 index = Index.from_env()
 DATA_DIR = Path(__file__).parent.parent / "data"
 
