@@ -1,7 +1,7 @@
-# Experiences
+
 ## Profesionnelles
 -Agente de surveillance de la voie publique pour la ville des sables d'olonne
--Entraîneure de ggymnastique
+-Entraîneure de gymnastique
 -Vendeuse en poissonnerie  
 -Alternance CRM dans un service Marketing d'une banque
 

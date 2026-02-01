@@ -1,4 +1,4 @@
-# Informations 
+
 ## Nom 
 Emmanuelle 
 Orain
@@ -13,8 +13,7 @@ Originaire des Sables d'Olonne
 A étudié à Angers pendant 5 ans 
 Désormais en formation à Niort 
 
-# Activités 
-## Sportives 
+## Sports 
 Gymnastique Artistique Féminine
 TeamGym
 2 titres de champions de France de TeamGym

@@ -5,7 +5,7 @@ import os
 
 load_dotenv()
 
-# Support Streamlit Cloud secrets
+#Permet à l'application de fonctionner à la fois en local et sur streamlit
 if "OPENAI_API_KEY" in st.secrets:
     os.environ["OPENAI_API_KEY"] = st.secrets["OPENAI_API_KEY"]
 if "UPSTASH_VECTOR_REST_URL" in st.secrets:
@@ -22,7 +22,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-# CSS personnalisé
+# CSS personnalisé pour le visuel streamlit
 st.markdown("""
 <style>
     /* Style global */
@@ -126,6 +126,7 @@ def rechercher_portfolio(question: str) -> str:
         return "Aucune information trouvée."
     return "\n\n".join([r.metadata["text"] for r in results if r.metadata])
 
+#Création de l'Agent IA (nom, modèle, instructions...) un doublon avec le fichier agent.py mais je n'ai pas trouvé comment le changer (car j'aurai pu mettre from src.agent import agent je crois mais sans certitude)
 agent = Agent(
     name="Assistant Portfolio",
     model="gpt-4.1-nano",

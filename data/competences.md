@@ -1,4 +1,4 @@
-# Compétences 
+
 ## Informatique 
 R
 SAS
